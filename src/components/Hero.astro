@@ -1,5 +1,6 @@
 ---
 const EVENT_LINK = "https://uzziticket.com/ingresso_ind.php?in=3855";
+const VENUE_LINK = "https://cocobambu.com.br/unidades/cb-bh-anchieta";
 ---
 
 <section
@@ -87,9 +88,14 @@ const EVENT_LINK = "https://uzziticket.com/ingresso_ind.php?in=3855";
         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
         <circle cx="12" cy="10" r="3" />
       </svg>
-      <span class="text-sm tracking-wide">
+      <a
+        href={VENUE_LINK}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-sm tracking-wide hover:text-gold transition-colors duration-200"
+      >
         Coco Bambu Anchieta — Belo Horizonte, MG
-      </span>
+      </a>
     </div>
 
     <!-- CTA -->
