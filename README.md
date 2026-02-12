@@ -62,9 +62,21 @@ npm install
 
 Todo o texto está em **PT-BR**.
 
-## Deploy
+## Deploy (GitHub Pages)
 
-O build gera arquivos estáticos em `dist/`. Basta publicar essa pasta em qualquer hospedagem estática (Vercel, Netlify, GitHub Pages, etc.).
+O repositório está configurado para **publicar automaticamente no GitHub Pages**:
+
+1. **Ative o GitHub Pages no repositório**  
+   Em **Settings → Pages**, em “Build and deployment”, escolha **Source: GitHub Actions**.
+
+2. A cada push na branch `main`, o workflow **Deploy to GitHub Pages** roda nos servidores do GitHub: instala dependências, executa `npm run build` e faz o deploy do conteúdo de `dist/` para o GitHub Pages.
+
+3. O site fica disponível em:  
+   **https://&lt;seu-usuário&gt;.github.io/business-and-wine-landing-page/**
+
+Para rodar o deploy manualmente, use **Actions → Deploy to GitHub Pages → Run workflow**.
+
+O diretório `dist/` está no `.gitignore`; apenas o resultado do build feito na CI é publicado, sem precisar commitar artefatos.
 
 ## Licença
 

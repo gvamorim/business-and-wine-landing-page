@@ -1,3 +1,6 @@
+---
+const base = import.meta.env.BASE_URL;
+---
 <section id="gastronomia" class="py-20 md:py-28 px-6 relative">
   <!-- Subtle background accent -->
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -28,7 +31,7 @@
         <!-- Wine image -->
         <div class="relative aspect-[16/9] overflow-hidden">
           <img
-            src="/images/wine.png"
+            src={`${base}images/wine.png`}
             alt="Seleção de vinhos do evento Business & Wine"
             class="w-full h-full object-cover"
             loading="lazy"
@@ -71,7 +74,7 @@
         <!-- Menu image -->
         <div class="relative aspect-[16/9] overflow-hidden">
           <img
-            src="/images/prato.png"
+            src={`${base}images/prato.png`}
             alt="Menu premium do evento Business & Wine"
             class="w-full h-full object-cover"
             loading="lazy"
