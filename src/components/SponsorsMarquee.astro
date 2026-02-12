@@ -1,0 +1,108 @@
+---
+const sponsors = [
+  {
+    name: "Omie Sistema de Gestão",
+    logo: "/images/omie.png",
+    url: "https://www.omie.com.br",
+  },
+  {
+    name: "A&R Soluções Tributárias",
+    logo: "/images/A&R.png",
+    url: "https://www.aersolucoes.com.br/",
+  },
+  {
+    name: "Finance AI",
+    logo: "/images/financeai.png",
+    url: "https://www.financeai.tec.br",
+  },
+  {
+    name: "BVC Advocacia Consultiva",
+    logo: "/images/bvc.png",
+    url: "https://beatrizadv.pages.dev/",
+  },
+  {
+    name: "Camargraf",
+    logo: "/images/camargraf.png",
+    url: "https://camargraf.com.br/",
+  },
+  {
+    name: "Contabilidade Porto",
+    logo: "/images/contabilidade_porto.png",
+    url: "#",
+  },
+  {
+    name: "Quatro Gestão",
+    logo: "/images/quatro.png",
+    url: "https://quatrogestao.com.br/",
+  },
+  {
+    name: "Assessoria Priscila Amaral e Parceiros",
+    logo: "/images/Assessoria Priscila Amaral e Parceiros.png",
+    url: "https://www.instagram.com/priscilaamaralassessoria?igsh=MTNiaHJxOWllcGh3ag==",
+  },
+];
+---
+
+<section id="parceiros" class="py-16 md:py-20 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 mb-10" data-animate>
+    <div class="text-center">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold mb-3">
+        Nossos <span class="text-gold">Parceiros</span>
+      </h2>
+      <div class="gold-divider"></div>
+    </div>
+  </div>
+
+  <!-- Marquee container -->
+  <div class="relative" data-animate="fade-up">
+    <!-- Fade edges -->
+    <div class="absolute left-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-r from-navy to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-l from-navy to-transparent z-10 pointer-events-none"></div>
+
+    <!-- Scrolling track (duplicated for seamless loop) -->
+    <div class="marquee-track flex items-center w-max">
+      {/* First set */}
+      {sponsors.map((sponsor) => (
+        <a
+          href={sponsor.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex-shrink-0 mx-8 md:mx-12 group"
+          title={sponsor.name}
+        >
+          <img
+            src={sponsor.logo}
+            alt={`Logo ${sponsor.name}`}
+            class="h-12 md:h-16 w-auto object-contain
+                   filter grayscale brightness-75 opacity-60
+                   transition-all duration-300
+                   group-hover:grayscale-0 group-hover:brightness-100 group-hover:opacity-100"
+            loading="lazy"
+          />
+        </a>
+      ))}
+      {/* Duplicate set for seamless loop */}
+      {sponsors.map((sponsor) => (
+        <a
+          href={sponsor.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex-shrink-0 mx-8 md:mx-12 group"
+          title={sponsor.name}
+          aria-hidden="true"
+          tabindex="-1"
+        >
+          <img
+            src={sponsor.logo}
+            alt=""
+            class="h-12 md:h-16 w-auto object-contain
+                   filter grayscale brightness-75 opacity-60
+                   transition-all duration-300
+                   group-hover:grayscale-0 group-hover:brightness-100 group-hover:opacity-100"
+            loading="lazy"
+          />
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-navy text-white font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+/* ========== Scroll Animations ========== */
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+[data-animate="fade-left"] {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+[data-animate="fade-right"] {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+[data-animate="fade-up"] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+[data-animate="scale-in"] {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-in {
+  opacity: 1 !important;
+  transform: translate(0, 0) scale(1) !important;
+}
+
+/* ========== Sponsors Marquee ========== */
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee-scroll 30s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ========== Gold Accent Divider ========== */
+
+.gold-divider {
+  @apply w-20 h-0.5 bg-gold mx-auto my-6;
+}
+
+/* ========== CTA Button ========== */
+
+.btn-cta {
+  @apply inline-block px-8 py-4 bg-gold text-navy font-bold text-lg rounded-lg
+         transition-all duration-300 ease-in-out
+         hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20
+         hover:-translate-y-0.5
+         active:translate-y-0;
+}
+
+.btn-cta-outline {
+  @apply inline-block px-8 py-4 border-2 border-gold text-gold font-bold text-lg rounded-lg
+         transition-all duration-300 ease-in-out
+         hover:bg-gold hover:text-navy hover:shadow-lg hover:shadow-gold/20
+         hover:-translate-y-0.5
+         active:translate-y-0;
+}

@@ -1,0 +1,120 @@
+---
+const EVENT_LINK = "https://uzziticket.com/ingresso_ind.php?in=3855";
+---
+
+<section
+  id="hero"
+  class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden"
+>
+  <!-- Background glow effect -->
+  <div
+    class="absolute inset-0 pointer-events-none"
+    aria-hidden="true"
+  >
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold/5 rounded-full blur-[120px]"
+    ></div>
+  </div>
+
+  <div class="relative z-10 max-w-4xl mx-auto">
+    <!-- Wine icon / decorative element -->
+    <div class="mb-8" data-animate="scale-in">
+      <svg
+        class="w-16 h-16 mx-auto text-gold"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M8 2h8l-1 8a5 5 0 0 1-10 0L8 2z" />
+        <path d="M12 15v5" />
+        <path d="M8 20h8" />
+      </svg>
+    </div>
+
+    <!-- Event badge -->
+    <div class="mb-6" data-animate="fade-up">
+      <span
+        class="inline-block px-4 py-1.5 border border-gold/40 text-gold text-sm font-body tracking-widest uppercase rounded-full"
+      >
+        23 de Fevereiro de 2026
+      </span>
+    </div>
+
+    <!-- Main headline -->
+    <h1
+      class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-6"
+      data-animate="fade-up"
+      style="transition-delay: 0.1s;"
+    >
+      Business <span class="text-gold">&</span> Wine
+    </h1>
+
+    <p
+      class="text-xl sm:text-2xl md:text-3xl font-heading text-gold/90 font-medium mb-6"
+      data-animate="fade-up"
+      style="transition-delay: 0.2s;"
+    >
+      Visão Estratégica 2026
+    </p>
+
+    <p
+      class="text-lg sm:text-xl text-white/70 font-light max-w-2xl mx-auto mb-4"
+      data-animate="fade-up"
+      style="transition-delay: 0.3s;"
+    >
+      5 Especialistas. 50 Líderes.<br />
+      Uma imersão estratégica e gastronômica.
+    </p>
+
+    <!-- Venue -->
+    <div
+      class="flex items-center justify-center gap-2 text-white/50 mb-10"
+      data-animate="fade-up"
+      style="transition-delay: 0.4s;"
+    >
+      <svg
+        class="w-5 h-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+        <circle cx="12" cy="10" r="3" />
+      </svg>
+      <span class="text-sm tracking-wide">
+        Coco Bambu Anchieta — Belo Horizonte, MG
+      </span>
+    </div>
+
+    <!-- CTA -->
+    <div data-animate="fade-up" style="transition-delay: 0.5s;">
+      <a href={EVENT_LINK} target="_blank" rel="noopener noreferrer" class="btn-cta">
+        Garanta Sua Vaga
+      </a>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div
+    class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
+    aria-hidden="true"
+  >
+    <svg
+      class="w-6 h-6 text-white/30"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M12 5v14M19 12l-7 7-7-7" />
+    </svg>
+  </div>
+</section>
