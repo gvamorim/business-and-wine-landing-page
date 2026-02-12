@@ -27,6 +27,16 @@ npm install
 | `npm run build`| Gera o site estático em `dist/` |
 | `npm run preview` | Pré-visualiza o build localmente |
 
+## Rodar localmente
+
+Depois de instalar as dependências (`npm install`), suba o servidor de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+O site abre em **http://localhost:4321/** (ou na porta que o Astro indicar no terminal). As alterações em arquivos são recarregadas automaticamente.
+
 ## Estrutura do projeto
 
 ```
